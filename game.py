@@ -15,7 +15,6 @@ pygame.display.set_caption("pong game")
 
 class Paddle:
     COLOR = WHITE
-    
     def __init__(self,x,y,width,height):
         '''the position and size of the paddle
         the x and y are the coordinates of the topleft
@@ -25,7 +24,11 @@ class Paddle:
         self.width = width
         self.height = height
     def draw(self,window):
+        '''draw the paddle'''
         pygame.draw.rect(window,self.COLOR,(self.x,self.y,self.width,self.height))
+    def move(self,window):
+        '''move the paddle'''
+        pass
 
 def fill_window(window,paddles):
     '''draw the image in the window'''
